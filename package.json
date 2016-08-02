@@ -1,0 +1,44 @@
+{
+  "name": "axinite",
+  "version": "0.0.1",
+  "homepage": "https://citrusui.github.io/axinite/",
+  "author": "Avery Magnotti <averymagnotti@outlook.com>",
+  "description": "Uncomplicated CSS for the future",
+  "main": "scss/axinite.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citrusui/axinite.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "axinite",
+    "css",
+    "scss",
+    "minimal",
+    "responsive"
+  ],
+  "bugs": {
+    "url": "https://github.com/citrusui/axinite/issues"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run sass && npm run min && npm run prefix",
+    "clean": "gulp clean",
+    "min": "gulp min",
+    "prefix": "gulp prefix",
+    "sass": "gulp sass"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "bootstrap": "^4.0.0-alpha.3",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "node-sass": "^3.8.0",
+    "normalize.css": "^4.2.0"
+  }
+}

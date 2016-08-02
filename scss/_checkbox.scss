@@ -1,0 +1,46 @@
+// _checkbox.scss
+
+// Hide default checkboxes
+
+input[type=checkbox]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  opacity: 0;
+}
+
+// Position checkboxes
+
+input[type=checkbox]:not(old) + label {
+  display: inline-block;
+  margin-left: -2em;
+  line-height: 1.5em;
+}
+
+// When unchecked
+
+input[type=checkbox]:not(old) + label > span {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  border: 0.0725em solid #e0e0e0;
+  border-radius: 0.25em;
+  background: #fff;
+  background-image: linear-gradient(#eee, #fff);
+  vertical-align: bottom;
+}
+
+// When checked
+
+input[type=checkbox]:not(old):checked + label > span:before{ 
+  content: '✓';
+  display: block;
+  width: 0.95em;
+  color: $blue;
+  font-size: 1.475em;
+  line-height: 1em;
+  text-align: center;
+  font-weight: bold;
+}

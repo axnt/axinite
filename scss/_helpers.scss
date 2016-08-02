@@ -1,0 +1,153 @@
+// Display
+
+$displays: "block" "flex" "inline" "inline-block" "inline-flex";
+
+@each $display in $displays {
+  .#{$display} {
+    display: #{$display};
+  }
+
+  .#{$display}-mobile {
+    @include mobile {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-tablet {
+    @include tablet {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-tablet-only {
+    @include tablet-only {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-touch {
+    @include touch {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-desktop {
+    @include desktop {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-desktop-only {
+    @include desktop-only {
+      display: #{$display} !important;
+    }
+  }
+
+  .#{$display}-widescreen {
+    @include widescreen {
+      display: #{$display} !important;
+    }
+  }
+}
+
+// Float
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+// Overflow
+
+.clipped {
+  overflow: hidden !important;
+}
+
+// Overlay
+
+.overlay {
+  @include overlay;
+}
+
+// Text
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Visibility
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-only {
+  @include tablet-only {
+    display: none !important;
+  }
+}
+
+.hidden-touch {
+  @include touch {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.hidden-desktop-only {
+  @include desktop-only {
+    display: none !important;
+  }
+}
+
+.hidden-widescreen {
+  @include widescreen {
+    display: none !important;
+  }
+}
+
+// Other
+
+.disabled {
+  pointer-events: none;
+}
+
+.marginless {
+  margin: 0 !important;
+}
+
+.unselectable {
+  @extend .unselectable;
+}
