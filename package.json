@@ -29,9 +29,7 @@
     "sass": "gulp sass"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.7",
-    "bootstrap": "^4.0.0-alpha.3",
-    "coffee-script": "^1.10.0",
+    "autoprefixer": "^6.4.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",

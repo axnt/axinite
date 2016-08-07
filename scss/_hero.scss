@@ -1,5 +1,19 @@
 .hero-primary {
-  background-image: linear-gradient(135deg, $brand-primary 0%, darken($brand-primary, 10%) 75%, darken($brand-primary, 20%) 100%);
-  padding: $spacer;
-  color: $gray-lighter;
-}
+  @include hero-variant($brand-primary);
+  }
+
+.hero-info {
+  @include hero-variant($brand-info);
+  }
+
+.hero-success {
+  @include hero-variant($brand-success);
+  }
+
+.hero-warning {
+  @include hero-variant($brand-warning);
+  }
+
+.hero-danger {
+  @include hero-variant($brand-danger);
+  }
