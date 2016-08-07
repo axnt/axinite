@@ -21,8 +21,9 @@
     "url": "https://github.com/citrusui/axinite/issues"
   },
   "scripts": {
-    "build": "npm run clean && npm run sass && npm run min && npm run prefix",
+    "build": "npm run clean && npm run sass && npm run min && npm run prefix && npm run hash",
     "clean": "gulp clean",
+    "hash": "gulp hash",
     "min": "gulp min",
     "prefix": "gulp prefix",
     "sass": "gulp sass"
@@ -30,6 +31,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "bootstrap": "^4.0.0-alpha.3",
+    "coffee-script": "^1.10.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",

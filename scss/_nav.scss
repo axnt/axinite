@@ -1,176 +1,157 @@
-// Components
-
-.nav-toggle {
-  @extend .hamburger;
-
-  // Responsiveness
-  @include tablet {
-    display: none;
-  }
-}
-
-.nav-item {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-
-  a {
-    flex-grow: 1;
-  }
-
-  img {
-    max-height: 24px;
-  }
-
-  .button + .button {
-    margin-left: 10px;
-  }
-
-  .tag {
-    &:first-child {
-      margin-right: 5px;
-    }
-
-    &:last-child {
-      margin-left: 5px;
-    }
-  }
-
-  // Responsiveness
-  @include mobile {
-    justify-content: flex-start;
-  }
-}
-
-.nav-item a,
-a.nav-item {
-  color: $text;
-
-  &:hover {
-    color: $link-hover;
-  }
-
-  // Modifiers
-  &.active {
-    color: $link-active;
-  }
-
-  &.tab {
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
-    padding-left: 12px;
-    padding-right: 12px;
-
-    &:hover {
-      border-bottom: 1px solid $link;
-      border-top: 1px solid transparent;
-    }
-
-    &.active {
-      border-bottom: 3px solid $link;
-      border-top: 3px solid transparent;
-      color: $link;
-    }
-  }
-}
-
-// Containers
-
-.nav-menu {
-  // Responsiveness
-  @include mobile {
-    background-color: $white;
-    box-shadow: 0 4px 7px rgba($black, 0.1);
-    left: 0;
-    display: none;
-    right: 0;
-    top: 100%;
-    position: absolute;
-
-    .nav-item {
-      border-top: 1px solid rgba($border, 0.5);
-      padding: 10px;
-    }
-
-    &.active {
-      display: block;
-    }
-  }
-}
-
-.nav-left {
-  align-items: stretch;
-  display: flex;
-  flex: 1;
-  justify-content: flex-start;
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.nav-center {
-  align-items: stretch;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-right {
-  // Responsiveness
-  @include tablet {
-    align-items: stretch;
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-  }
-}
-
-// Main container
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
 
 .nav {
-  align-items: stretch;
-  background-color: $white;
-  display: flex;
-  min-height: $nav-height;
-  position: relative;
-  text-align: center;
-  z-index: 2;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
 
-  & > .container {
-    align-items: stretch;
-    display: flex;
-    min-height: $nav-height;
-    width: 100%;
+.nav-link {
+  display: inline-block;
 
-    & > .nav-left {
-      & > .nav-item:first-child:not(.tab) {
-        padding-left: 0;
-      }
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text and removes hover/tab effects
+  &.disabled {
+    color: $nav-disabled-link-color;
+
+    @include plain-hover-focus {
+      color: $nav-disabled-link-hover-color;
+      cursor: $cursor-disabled;
+      background-color: $nav-disabled-link-hover-bg;
+    }
+  }
+}
+
+
+// Nav inline
+
+.nav-inline {
+  .nav-item {
+    display: inline-block;
+  }
+
+  .nav-item + .nav-item,
+  .nav-link + .nav-link {
+    margin-left: $nav-item-inline-spacer;
+  }
+}
+
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  @include clearfix();
+
+  .nav-item {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -$nav-tabs-border-width;
+
+    + .nav-item {
+      margin-left: $nav-item-margin;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
     }
 
-    & > .nav-right {
-      & > .nav-item:last-child:not(.tab) {
-        padding-right: 0;
+    &.disabled {
+      @include plain-hover-focus {
+        color: $nav-disabled-link-color;
+        background-color: transparent;
+        border-color: transparent;
       }
     }
   }
 
-  .container > & {
-    & > .nav-left {
-      & > .nav-item:first-child:not(.tab) {
-        padding-left: 0;
-      }
-    }
-
-    & > .nav-right {
-      & > .nav-item:last-child:not(.tab) {
-        padding-right: 0;
-      }
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-tabs-active-link-hover-color;
+      background-color: $nav-tabs-active-link-hover-bg;
+      border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color transparent;
     }
   }
 
-  // Modifiers
-  &.has-shadow {
-    box-shadow: 0 2px 3px rgba($black, 0.1);
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  @include clearfix();
+
+  .nav-item {
+    float: left;
+
+    + .nav-item {
+      margin-left: $nav-item-margin;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-pills-active-link-color;
+      cursor: default;
+      background-color: $nav-pills-active-link-bg;
+    }
+  }
+}
+
+.nav-stacked {
+  .nav-item {
+    display: block;
+    float: none;
+
+    + .nav-item {
+      margin-top: $nav-item-margin;
+      margin-left: 0;
+    }
+  }
+}
+
+
+//
+// Tabbable tabs
+//
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
   }
 }

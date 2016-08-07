@@ -14,6 +14,8 @@ gulp.task('clean', function() {
   return del(['css/**/*']);
 });
 
+gulp.task('hash', shell.task(['echo "Current SRI hash:"; openssl dgst -sha384 -binary css/axinite.min.css | openssl base64 -A; echo \n']));
+
 gulp.task('min', function() {
  return gulp.src('scss/axinite.scss')
   .pipe(sourcemaps.init())

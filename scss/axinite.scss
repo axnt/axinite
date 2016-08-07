@@ -1,34 +1,35 @@
 // Axinite 0.0.1
 
-@import "utilities";
+// Core variables and mixins
 @import "variables";
-@import "normalize";
-@import "generic";
-@import "classes";
-@import "helpers";
-@import "box";
-@import "button";
-@import "checkbox";
-@import "radio";
-@import "content";
-@import "form";
-@import "image";
-@import "notification";
-@import "progress";
-@import "table";
-@import "title";
-@import "other";
-@import "card";
+@import "mixins";
+
+// Reset and dependencies
+@import "../node_modules/normalize.css/normalize.css";
+@import "print";
+
+// Core CSS
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
 @import "grid";
-@import "level";
-@import "media";
-@import "menu";
-@import "message";
+@import "tables";
+@import "buttons";
+
+// Components
+@import "animation";
+@import "button-group";
 @import "nav";
-@import "navbar";
+@import "card";
 @import "pagination";
-@import "panel";
-@import "tabs";
+@import "tags";
+@import "jumbotron";
 @import "hero";
-@import "section";
-@import "footer";
+@import "alert";
+@import "media";
+@import "list-group";
+@import "close";
+
+// Utility classes
+@import "utilities";

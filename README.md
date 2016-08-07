@@ -1,21 +1,22 @@
 # Axinite
 
+[![Build Status](https://travis-ci.org/citrusui/axinite.svg?branch=master)](https://travis-ci.org/citrusui/axinite)
+[![Dependency Status](https://david-dm.org/citrusui/axinite.svg)](https://david-dm.org/citrusui/axinite)
+
 Uncomplicated CSS for the future.
 
 I have a few plans for this, but right now I'm too busy.
 
 ## Roadmap to 1.0
 
-[ ] Write documentation (Jekyll)
+- [ ] Fix primary button color
 
-[ ] Similar markup with Bootstrap's navbar
+- [ ] Write documentation (Jekyll + AMP)
 
-[ ] Finish rewriting color variables
+- [ ] Similar markup with Bootstrap's navbar
 
-[ ] Remove findColorInvert
+- [ ] Finish rewriting color variables
 
-[ ] Add some JavaScript
+- [ ] Remove findColorInvert
 
-[ ] Create custom SVG icon set
-
-[ ] Test compatibility with major browsers
+- [ ] Test compatibility with major browsers
