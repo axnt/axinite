@@ -18,10 +18,8 @@ gulp.task('hash', shell.task(['echo "Current SRI hash:"; openssl dgst -sha384 -b
 
 gulp.task('min', function() {
  return gulp.src('scss/axinite.scss')
-  .pipe(sourcemaps.init())
   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(rename('axinite.min.css'))
-  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('css'));
 });
 
@@ -35,9 +33,7 @@ gulp.task('prefix', function() {
 
 gulp.task('sass', function() {
   return gulp.src('scss/axinite.scss')
-  .pipe(sourcemaps.init())
   .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('css'));
 });
 

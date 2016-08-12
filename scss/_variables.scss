@@ -47,6 +47,7 @@ $brand-success:             #97cd76 !default;
 $brand-info:                #4ea5d9 !default;
 $brand-warning:             #fce473 !default;
 $brand-danger:              #ed6c63 !default;
+$brand-dark:              #69707a !default;
 $brand-inverse:             $gray-dark !default;
 
 
@@ -57,7 +58,6 @@ $brand-inverse:             $gray-dark !default;
 $enable-flex:               true !default;
 $enable-rounded:            true !default;
 $enable-shadows:            false !default;
-$enable-gradients:          false !default;
 $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
@@ -286,6 +286,10 @@ $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              $btn-danger-bg !default;
 
+$btn-dark-color:               #fff !default;
+$btn-dark-bg:                  $brand-dark !default;
+$btn-dark-border:              $btn-dark-bg !default;
+
 $btn-link-disabled-color:        $gray-light !default;
 
 $btn-padding-x-sm:               .5rem !default;
@@ -303,21 +307,6 @@ $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
 
 $cursor-disabled: not-allowed !default;
-
-// Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-
-$zindex-dropdown-backdrop:  990 !default;
-$zindex-navbar:            1000 !default;
-$zindex-dropdown:          1000 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
-$zindex-navbar-fixed:      1030 !default;
-$zindex-navbar-sticky:     1030 !default;
-$zindex-modal-bg:          1040 !default;
-$zindex-modal:             1050 !default;
 
 // Navs
 

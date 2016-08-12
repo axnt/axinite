@@ -17,3 +17,7 @@
 .hero-danger {
   @include hero-variant($brand-danger);
   }
+
+.hero-dark {
+  @include hero-variant($brand-dark);
+  }

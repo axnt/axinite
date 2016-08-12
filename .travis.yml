@@ -8,3 +8,6 @@ script:
   - "gulp"
 notifications:
   email: false
+branches:
+  only:
+    - gh-pages
