@@ -21,24 +21,19 @@
     "url": "https://github.com/citrusui/axinite/issues"
   },
   "scripts": {
-    "build": "npm run clean && npm run sass && npm run min && npm run prefix && npm run hash",
-    "clean": "gulp clean",
-    "hash": "gulp hash",
-    "min": "gulp min",
-    "prefix": "gulp prefix",
-    "sass": "gulp sass"
+    "build": "npm run sass && npm run min && npm run prefix && npm run prefix-min",
+    "clean": "rm -rf css",
+    "hash": "echo \"Current SRI hash:\"; openssl dgst -sha384 -binary css/axinite.min.css | openssl base64 -A; echo \n",
+    "min": "node-sass --output-style compressed --source-map true scss/axinite.scss css/axinite.min.css",
+    "prefix": "postcss --use autoprefixer --map --output css/axinite.css css/axinite.css",
+    "prefix-min": "postcss --use autoprefixer --map --output css/axinite.min.css css/axinite.min.css",
+    "sass": "node-sass --output-style expanded --source-map true scss/axinite.scss -o css",
+    "watch": "node-sass -w scss/axinite.scss -o css"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "del": "^2.2.1",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-postcss": "^6.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2",
-    "gulp-sourcemaps": "^1.6.0",
     "node-sass": "^3.8.0",
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^4.2.0",
+    "postcss-cli": "^2.6.0"
   }
 }
