@@ -22,17 +22,17 @@
   },
   "scripts": {
     "build": "npm run sass && npm run min && npm run prefix && npm run prefix-min",
-    "clean": "rm -rf css",
-    "hash": "echo \"Current SRI hash:\"; openssl dgst -sha384 -binary css/axinite.min.css | openssl base64 -A; echo \n",
-    "min": "node-sass --output-style compressed --source-map true scss/axinite.scss css/axinite.min.css",
-    "prefix": "postcss --use autoprefixer --map --output css/axinite.css css/axinite.css",
-    "prefix-min": "postcss --use autoprefixer --map --output css/axinite.min.css css/axinite.min.css",
-    "sass": "node-sass --output-style expanded --source-map true scss/axinite.scss -o css",
+    "clean": "rm -rf docs/css",
+    "hash": "echo \"Current SRI hash:\"; openssl dgst -sha384 -binary docs/css/axinite.min.css | openssl base64 -A; echo \n",
+    "min": "node-sass --output-style compressed --source-map true scss/axinite.scss docs/css/axinite.min.css",
+    "prefix": "postcss --use autoprefixer --map --output docs/css/axinite.css docs/css/axinite.css",
+    "prefix-min": "postcss --use autoprefixer --map --output docs/css/axinite.min.css docs/css/axinite.min.css",
+    "sass": "node-sass --output-style expanded --source-map true scss/axinite.scss -o docs/css",
     "watch": "node-sass -w scss/axinite.scss -o css"
   },
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "node-sass": "^3.8.0",
+    "autoprefixer": "^6.4.1",
+    "node-sass": "^3.10.0",
     "normalize.css": "^4.2.0",
     "postcss-cli": "^2.6.0"
   }
