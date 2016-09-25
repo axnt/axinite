@@ -1,6 +1,6 @@
 {
   "name": "axinite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://citrusui.github.io/axinite/",
   "author": "Avery Magnotti <averymagnotti@outlook.com>",
   "description": "Uncomplicated CSS for the future",
@@ -22,7 +22,6 @@
   },
   "scripts": {
     "build": "npm run sass && npm run min && npm run prefix && npm run prefix-min",
-    "clean": "rm -rf docs/css",
     "hash": "echo \"Current SRI hash:\"; openssl dgst -sha384 -binary docs/css/axinite.min.css | openssl base64 -A; echo \n",
     "min": "node-sass --output-style compressed --source-map true scss/axinite.scss docs/css/axinite.min.css",
     "prefix": "postcss --use autoprefixer --map --output docs/css/axinite.css docs/css/axinite.css",

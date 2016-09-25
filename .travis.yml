@@ -5,6 +5,3 @@ script:
   - "npm run build"
 notifications:
   email: false
-branches:
-  only:
-    - gh-pages
