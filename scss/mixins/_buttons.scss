@@ -1,5 +1,9 @@
 @mixin button($primary-color) {
     background-color: $primary-color;
-    border-color: darken($primary-color, 10%);
     color: #fff;
+    
+    &:active,
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
 }

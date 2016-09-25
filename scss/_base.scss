@@ -1,44 +1,91 @@
-a,
-a:active,
-a:focus,
-a:visited {
+a {
     color: $primary-brand;
     text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+
+    &:active,
+    &:hover,
+    &:visited {
+        text-decoration: underline;
+    }
+    
+    &:visited {
+        color: darken($primary-brand, 30%);
+    }
+    
+    &:hover {
+        color: darken($primary-brand, 10%);
+    }
+    
+    &:active {
+        color: darken($primary-brand, 20%);
+    }
 }
 
 button,
-.btn {
+.btn,
+.btn[href] {
     border-radius: .25rem;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
     font-size: 1rem;
     padding: .5rem 1rem;
     text-align: center;
+    text-decoration: none;
     vertical-align: middle;
     white-space: nowrap;
     -webkit-user-select: none;
 }
 
-.btn-primary {
+.btn-brand {
     @include button($primary-brand);
 }
 
-.btn-dawn {
-    @include button($primary-dawn);
+.btn-candy {
+    @include button($primary-candy);
 }
 
-.btn-dusk {
-    @include button($primary-dusk);
+.btn-dust {
+    @include button($primary-dust);
+}
+
+.btn-flame {
+    @include button($primary-flame);
+}
+
+.btn-leaf {
+    @include button($primary-leaf);
+}
+
+.btn-moon {
+    @include button($primary-moon);
 }
 
 html {
     font-family: $serif-font-stack;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.blurred {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+code,
+kbd,
+pre, {
+    font-family: $mono-font-stack;
+}
+
+kbd {
+    background-color: #000;
+    border: 1px solid lighten(#000, 40%);
+    border-radius: .25em;
+    color: #fff;
+    padding-top: 2px;
+}
+
+pre > code {
+    background-color: #eee;
+    border-left: 2px solid $primary-brand;
+    display: inline-block;
+    line-height: 1.25;
+    padding: .25em;
+    white-space: normal;
+    width: 100%;
 }

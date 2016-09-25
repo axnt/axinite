@@ -28,7 +28,7 @@
     "prefix": "postcss --use autoprefixer --map --output docs/css/axinite.css docs/css/axinite.css",
     "prefix-min": "postcss --use autoprefixer --map --output docs/css/axinite.min.css docs/css/axinite.min.css",
     "sass": "node-sass --output-style expanded --source-map true scss/axinite.scss -o docs/css",
-    "watch": "node-sass -w scss/axinite.scss -o css"
+    "watch": "node-sass -w scss/axinite.scss -o docs/css"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
