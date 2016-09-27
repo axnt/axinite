@@ -1,0 +1,32 @@
+code,
+kbd,
+pre,
+samp {
+    font-family: $mono-font-stack;
+}
+
+code {
+    padding: 2px 4px;
+    vertical-align: text-bottom;
+}
+
+kbd {
+    background-color: $kbd-bg-color;
+    border-radius: 2px;
+    color: #fff;
+}
+
+code,
+pre {
+     background-color: $primary-light;
+     border-radius: 2px;
+     color: $code-text-color;
+}
+
+pre {
+    background-color: #eee;
+    border: 1px solid darken($primary-light, 5%);
+    display: block;
+    line-height: 1.25;
+    padding: 1em;
+}

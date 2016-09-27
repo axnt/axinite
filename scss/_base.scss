@@ -9,7 +9,7 @@ a {
     }
     
     &:visited {
-        color: darken($primary-brand, 30%);
+        color: $primary-moon;
     }
     
     &:hover {
@@ -21,71 +21,25 @@ a {
     }
 }
 
-button,
-.btn,
-.btn[href] {
-    border-radius: .25rem;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    -webkit-user-select: none;
-}
-
-.btn-brand {
-    @include button($primary-brand);
-}
-
-.btn-candy {
-    @include button($primary-candy);
-}
-
-.btn-dust {
-    @include button($primary-dust);
-}
-
-.btn-flame {
-    @include button($primary-flame);
-}
-
-.btn-leaf {
-    @include button($primary-leaf);
-}
-
-.btn-moon {
-    @include button($primary-moon);
+body {
+  color: #888;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 4em 1em;
 }
 
 html {
-    font-family: $serif-font-stack;
+    font-family: $sans-serif-font-stack;
     -webkit-tap-highlight-color: transparent;
 }
 
-code,
-kbd,
-pre, {
-    font-family: $mono-font-stack;
-}
-
-kbd {
-    background-color: #000;
-    border: 1px solid lighten(#000, 40%);
-    border-radius: .25em;
-    color: #fff;
-    padding-top: 2px;
-}
-
-pre > code {
-    background-color: #eee;
-    border-left: 2px solid $primary-brand;
-    display: inline-block;
-    line-height: 1.25;
-    padding: .25em;
-    white-space: normal;
-    width: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: #333;
 }

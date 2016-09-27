@@ -1,0 +1,41 @@
+@import "mixins/buttons";
+
+button,
+.btn,
+.btn[href] {
+    border-radius: .25rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-user-select: none;
+}
+
+.btn-brand {
+    @include button($primary-brand);
+}
+
+.btn-candy {
+    @include button($primary-candy);
+}
+
+.btn-dust {
+    @include button($primary-dust);
+}
+
+.btn-flame {
+    @include button($primary-flame);
+}
+
+.btn-leaf {
+    @include button($primary-leaf);
+}
+
+.btn-moon {
+    @include button($primary-moon);
+}

@@ -5,3 +5,4 @@
 
 Start from scratch. A work in progress.
 
+For status updates, see [this project for 1.0](https://github.com/citrusui/axinite/projects/2).
