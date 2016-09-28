@@ -5,7 +5,8 @@ samp {
     font-family: $mono-font-stack;
 }
 
-code {
+code,
+kbd {
     padding: 2px 4px;
     vertical-align: text-bottom;
 }

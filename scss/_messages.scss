@@ -1,0 +1,25 @@
+@import "mixins/messages";
+
+.msg-brand {
+    @include message($primary-brand);
+}
+
+.msg-candy {
+    @include message($primary-candy);
+}
+
+.msg-dust {
+    @include message($primary-dust);
+}
+
+.msg-flame {
+    @include message($primary-flame);
+}
+
+.msg-leaf {
+    @include message($primary-leaf);
+}
+
+.msg-moon {
+    @include message($primary-moon);
+}
