@@ -8,10 +8,30 @@ $primary-light: #f5f7f9 !default;
 $primary-moon: #5762d5 !default;
 
 // Font stack
+$mono-font-stack: "Oxygen Mono", Menlo, "Lucida Console", "Roboto Mono", "Ubuntu Mono", monospace !default;
 $sans-serif-font-stack: Oxygen, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif !default;
 $serif-font-stack: Georgia, "Times New Roman", Times, serif !default;
-$mono-font-stack: "Oxygen Mono", Menlo, "Lucida Console", "Roboto Mono", "Ubuntu Mono", monospace !default;
 
 // Code
 $code-text-color: #92b4a7 !default;
 $kbd-bg-color: #261c15 !default;
+
+// Tooltips
+$tooltip-bg-color: #000 !default;
+$tooltip-delay: 0.4s !default;
+$tooltip-duration: 0.1s !default;
+$tooltip-max-width: 250px !default;
+$tooltip-text-color: #fff !default;
+$tooltip-z-index: 1000000 !default;
+
+// Sizing
+$body-font-size: 1em !default;
+$h1-font-size: 2.25em;
+$h2-font-size: 2em;
+$h3-font-size: 1.75em;
+$h4-font-size: 1.5em;
+$h5-font-size: 1.25em;
+$h6-font-size: $body-font-size !default;
+
+// Spacing
+$base-line-height: 1.5 !default;

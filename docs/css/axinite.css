@@ -496,6 +496,30 @@ strong {
   color: #333;
 }
 
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
 button,
 .btn,
 .btn[href] {
@@ -670,6 +694,8 @@ pre {
   display: block;
   line-height: 1.25;
   padding: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .msg-brand {
@@ -742,5 +768,148 @@ pre {
   line-height: 1.5;
   padding: 15px;
   position: relative;
+}
+
+.tip {
+  position: relative;
+}
+
+.tip::after {
+  background: #000;
+  border-radius: 3px;
+  color: #fff;
+  content: attr(aria-label);
+  display: none;
+  font: normal normal 0.75em Oxygen, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: normal;
+  opacity: 0;
+  padding: 5px 8px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: pre;
+  word-wrap: break-word;
+  z-index: 1000000;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.tip::before {
+  border: 5px solid transparent;
+  color: #000;
+  content: "";
+  display: none;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  z-index: 1000001;
+}
+
+@-webkit-keyframes tooltip-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tip:hover::before, .tip:hover::after,
+.tip:active::before,
+.tip:active::after,
+.tip:focus::before,
+.tip:focus::after {
+  -webkit-animation-name: tooltip-fade;
+          animation-name: tooltip-fade;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.tip-bottom::after {
+  margin-top: 5px;
+  right: 50%;
+  top: 100%;
+}
+
+.tip-bottom::before {
+  border-bottom-color: #000;
+  bottom: -5px;
+  margin-right: -5px;
+  right: 50%;
+  top: auto;
+}
+
+.tip-top::after {
+  bottom: 100%;
+  margin-bottom: 5px;
+  right: 50%;
+}
+
+.tip-top::before {
+  border-top-color: #000;
+  bottom: auto;
+  margin-right: -5px;
+  right: 50%;
+  top: -5px;
+}
+
+.tip-bottom::after,
+.tip-top::after {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.tip-left::after {
+  bottom: 50%;
+  margin-right: 5px;
+  right: 100%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.tip-left::before {
+  border-left-color: #000;
+  bottom: 50%;
+  left: -5px;
+  margin-top: -5px;
+  top: 50%;
+}
+
+.tip-right::after {
+  bottom: 50%;
+  left: 100%;
+  margin-left: 5px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.tip-right::before {
+  border-right-color: #000;
+  bottom: 50%;
+  margin-top: -5px;
+  right: -5px;
+  top: 50%;
 }
 /*# sourceMappingURL=axinite.css.map */

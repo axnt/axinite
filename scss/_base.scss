@@ -23,7 +23,7 @@ a {
 
 body {
   color: #888;
-  line-height: 1.5;
+  line-height: $base-line-height;
   margin: 0 auto;
   max-width: 50em;
   padding: 4em 1em;
@@ -42,4 +42,28 @@ h5,
 h6,
 strong {
     color: #333;
+}
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+h4 {
+    font-size: $h4-font-size;
+}
+
+h5 {
+    font-size: $h5-font-size;
+}
+
+h6 {
+    font-size: $h6-font-size;
 }

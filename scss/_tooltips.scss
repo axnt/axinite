@@ -1,0 +1,135 @@
+.tip {
+  position: relative;
+}
+
+.tip::after {
+  background: $tooltip-bg-color;
+  border-radius: 3px;
+  color: $tooltip-text-color;
+  content: attr(aria-label);
+  display: none;
+  font: normal normal ($body-font-size * 0.75) $sans-serif-font-stack;
+  line-height: $base-line-height;
+  letter-spacing: normal;
+  opacity: 0;
+  padding: 5px 8px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: pre;
+  word-wrap: break-word;
+  z-index: $tooltip-z-index;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.tip::before {
+  border: 5px solid transparent;
+  color: $tooltip-bg-color;
+  content: "";
+  display: none;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  z-index: ($tooltip-z-index + 1);
+}
+
+@keyframes tooltip-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tip:hover,
+.tip:active,
+.tip:focus {
+  &::before,
+  &::after {
+    animation-name: tooltip-fade;
+    animation-duration: $tooltip-duration;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: $tooltip-delay;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+.tip-bottom {
+  &::after {
+    margin-top: 5px;
+    right: 50%;
+    top: 100%;
+  }
+
+  &::before {
+    border-bottom-color: $tooltip-bg-color;
+    bottom: -5px;
+    margin-right: -5px;
+    right: 50%;
+    top: auto;
+  }
+}
+
+.tip-top {
+  &::after {
+    bottom: 100%;
+    margin-bottom: 5px;
+    right: 50%;
+  }
+
+  &::before {
+    border-top-color: $tooltip-bg-color;
+    bottom: auto;
+    margin-right: -5px;
+    right: 50%;
+    top: -5px;
+  }
+}
+
+.tip-bottom::after,
+.tip-top::after {
+  transform: translateX(50%);
+}
+
+.tip-left {
+  &::after {
+    bottom: 50%;
+    margin-right: 5px;
+    right: 100%;
+    transform: translateY(50%);
+  }
+
+  &::before {
+    border-left-color: $tooltip-bg-color;
+    bottom: 50%;
+    left: -5px;
+    margin-top: -5px;
+    top: 50%;
+  }
+}
+
+.tip-right {
+  &::after {
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    transform: translateY(50%);
+  }
+
+  &::before {
+    border-right-color: $tooltip-bg-color;
+    bottom: 50%;
+    margin-top: -5px;
+    right: -5px;
+    top: 50%;
+  }
+}

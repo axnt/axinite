@@ -19,9 +19,9 @@ kbd {
 
 code,
 pre {
-     background-color: $primary-light;
-     border-radius: 2px;
-     color: $code-text-color;
+    background-color: $primary-light;
+    border-radius: 2px;
+    color: $code-text-color;
 }
 
 pre {
@@ -30,4 +30,6 @@ pre {
     display: block;
     line-height: 1.25;
     padding: 1em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
