@@ -1,5 +1,9 @@
 @import "mixins/messages";
 
+.msg-default {
+    @include message($primary-default);
+}
+
 .msg-brand {
     @include message($primary-brand);
 }

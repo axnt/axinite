@@ -16,6 +16,10 @@ button,
     -webkit-user-select: none;
 }
 
+.btn-default {
+    @include button($primary-default);
+}
+
 .btn-brand {
     @include button($primary-brand);
 }
