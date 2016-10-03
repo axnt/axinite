@@ -41,7 +41,7 @@ h4,
 h5,
 h6,
 strong {
-    color: #333;
+    color: inherit;
 }
 
 h1 {
@@ -66,4 +66,14 @@ h5 {
 
 h6 {
     font-size: $h6-font-size;
+}
+
+.light-bg {
+    background-color: #eee;
+    color: #888;
+}
+
+.dark-bg {
+    background-color: #1d201f;
+    color: #fff;
 }

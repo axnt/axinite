@@ -1,6 +1,6 @@
 {
   "name": "axinite",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://citrusui.github.io/axinite/",
   "author": "Avery Magnotti <averymagnotti@outlook.com>",
   "description": "Uncomplicated CSS for the future",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "node-sass": "^3.10.0",
-    "normalize.css": "^4.2.0",
+    "normalize.css": "^5.0.0",
     "postcss-cli": "^2.6.0"
   }
 }

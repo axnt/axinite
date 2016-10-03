@@ -1,8 +1,9 @@
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 /* Document
    ========================================================================== */
@@ -384,7 +385,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -493,7 +494,7 @@ h4,
 h5,
 h6,
 strong {
-  color: #333;
+  color: inherit;
 }
 
 h1 {
@@ -518,6 +519,16 @@ h5 {
 
 h6 {
   font-size: 1em;
+}
+
+.light-bg {
+  background-color: #eee;
+  color: #888;
+}
+
+.dark-bg {
+  background-color: #1d201f;
+  color: #fff;
 }
 
 button,
@@ -733,32 +744,32 @@ pre {
   vertical-align: middle;
 }
 
-.form.form-default:focus {
+.form.form-default:focus, .form.form-default-active {
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 5px #e5e5e5;
 }
 
-.form.form-brand:focus {
+.form.form-brand:focus, .form.form-brand-active {
   border: 1px solid #4ea5d9;
   box-shadow: 0 0 5px #4ea5d9;
 }
 
-.form.form-dust:focus {
+.form.form-dust:focus, .form.form-dust-active {
   border: 1px solid #b89685;
   box-shadow: 0 0 5px #b89685;
 }
 
-.form.form-flame:focus {
+.form.form-flame:focus, .form.form-flame-active {
   border: 1px solid #e03431;
   box-shadow: 0 0 5px #e03431;
 }
 
-.form.form-leaf:focus {
+.form.form-leaf:focus, .form.form-leaf-active {
   border: 1px solid #79ce80;
   box-shadow: 0 0 5px #79ce80;
 }
 
-.form.form-moon:focus {
+.form.form-moon:focus, .form.form-moon-active {
   border: 1px solid #5762d5;
   box-shadow: 0 0 5px #5762d5;
 }
