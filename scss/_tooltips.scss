@@ -1,6 +1,4 @@
-.tip {
-  position: relative;
-}
+.tip { position: relative; }
 
 .tip::after {
   background: $tooltip-bg-color;
@@ -39,13 +37,9 @@
 }
 
 @keyframes tooltip-fade {
-  from {
-    opacity: 0;
-  }
+  from { opacity: 0; }
 
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 .tip:hover,

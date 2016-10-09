@@ -1,0 +1,4 @@
+@import "mixins/gradients";
+
+.gradient-brand-leaf { @include gradient(135deg, $primary-brand, $primary-leaf); }
+.gradient-brand-flame { @include gradient(135deg, $primary-brand, $primary-flame); }

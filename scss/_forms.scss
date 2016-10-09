@@ -12,34 +12,44 @@
     outline: none;
     padding: 6px 8px;
     vertical-align: middle;
-    
-    &.form-default:focus, &.form-default-active {
+}
+
+    .form-default:focus, .form-default-active {
         border: 1px solid $primary-default;
         @include shadow($primary-default);
     }
     
-    &.form-brand:focus, &.form-brand-active {
+    .form-brand:focus, .form-brand-active {
         border: 1px solid $primary-brand;
         @include shadow($primary-brand);
     }
     
-    &.form-dust:focus, &.form-dust-active {
+    .form-butter:focus, .form-butter-active {
+        border: 1px solid $primary-butter;
+        @include shadow($primary-butter);
+    }
+
+    .form-candy:focus, .form-candy-active {
+        border: 1px solid $primary-candy;
+        @include shadow($primary-candy);
+    }
+
+    .form-dust:focus, .form-dust-active {
       border: 1px solid $primary-dust;
       @include shadow($primary-dust);
     }
     
-    &.form-flame:focus, &.form-flame-active {
+    .form-flame:focus, .form-flame-active {
       border: 1px solid $primary-flame;
       @include shadow($primary-flame);
     }
     
-    &.form-leaf:focus, &.form-leaf-active {
+    .form-leaf:focus, .form-leaf-active {
       border: 1px solid $primary-leaf;
       @include shadow($primary-leaf);
     }
     
-    &.form-moon:focus, &.form-moon-active {
+    .form-moon:focus, .form-moon-active {
       border: 1px solid $primary-moon;
       @include shadow($primary-moon);
     }
-}

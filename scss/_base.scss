@@ -1,33 +1,31 @@
 a {
-    color: $primary-brand;
+    color: lighten($primary-brand, 5%);
     text-decoration: none;
 
     &:active,
     &:hover,
-    &:visited {
-        text-decoration: underline;
+    &:visited { text-decoration: underline; }
+
+    &:visited { color: lighten($primary-flame, 5%); }
+
+    &:link:hover:not(.btn) {
+    color: darken($primary-brand, 10%);
     }
     
-    &:visited {
-        color: $primary-moon;
+    &:link:active:not(.btn) {
+    color: darken($primary-brand, 20%);
     }
     
-    &:hover {
-        color: darken($primary-brand, 10%);
+    &:visited:hover:not(.btn) {
+    color: darken($primary-flame, 10%);
     }
     
-    &:active {
-        color: darken($primary-brand, 20%);
+    &:visited:active:not(.btn) {
+    color: darken($primary-flame, 20%);
     }
 }
 
-body {
-  color: #888;
-  line-height: $base-line-height;
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 4em 1em;
-}
+body { color: $body-text-color; }
 
 html {
     font-family: $sans-serif-font-stack;
@@ -40,40 +38,26 @@ h3,
 h4,
 h5,
 h6,
-strong {
-    color: inherit;
-}
+strong { color: inherit; }
 
-h1 {
-    font-size: $h1-font-size;
-}
+h1 { font-size: $h1-font-size; }
 
-h2 {
-    font-size: $h2-font-size;
-}
+h2 { font-size: $h2-font-size; }
 
-h3 {
-    font-size: $h3-font-size;
-}
+h3 { font-size: $h3-font-size; }
 
-h4 {
-    font-size: $h4-font-size;
-}
+h4 { font-size: $h4-font-size; }
 
-h5 {
-    font-size: $h5-font-size;
-}
+h5 { font-size: $h5-font-size; }
 
-h6 {
-    font-size: $h6-font-size;
-}
+h6 { font-size: $h6-font-size; }
 
 .light-bg {
-    background-color: #eee;
-    color: #888;
+    background-color: $light-bg-color;
+    color: $body-light-color;
 }
 
 .dark-bg {
-    background-color: #1d201f;
-    color: #fff;
+    background-color: $dark-bg-color;
+    color: $body-dark-color;
 }

@@ -1,9 +1,7 @@
 code,
 kbd,
 pre,
-samp {
-    font-family: $mono-font-stack;
-}
+samp { font-family: $mono-font-stack; }
 
 code,
 kbd {
@@ -11,25 +9,26 @@ kbd {
     vertical-align: text-bottom;
 }
 
-kbd {
-    background-color: $kbd-bg-color;
-    border-radius: 2px;
-    color: #fff;
-}
-
 code,
-pre {
-    background-color: $primary-light;
-    border-radius: 2px;
+kbd,
+pre { border-radius: 2px; }
+
+code {
+    background-color: $code-bg-color;
     color: $code-text-color;
 }
 
+kbd {
+    background-color: $kbd-bg-color;
+    color: $kbd-text-color;
+}
+
 pre {
-    background-color: #eee;
-    border: 1px solid darken($primary-light, 5%);
+    background-color: $pre-bg-color;
+    color: $pre-text-color;
+    border: 1px solid darken($pre-bg-color, 5%);
     display: block;
     line-height: 1.25;
+    overflow-x: auto;
     padding: 1em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
 }

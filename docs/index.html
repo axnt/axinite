@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-      <html>
+<html>
 
-      <head>
-            <meta charset="utf-8">
-            <meta name="theme-color" content="#b89685">
-            <meta name="viewport" content="width=device-width,initial-scale=1">
-            <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
-            <link rel="stylesheet" href="css/axinite.css">
-            <title>Test Page</title>
-      </head>
+<head>
+      <meta charset="utf-8">
+      <meta name="theme-color" content="#b89685">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+      <link rel="stylesheet" href="css/axinite.css">
+      <title>Test Page</title>
+</head>
 
-      <body>
+<body>
+      <div class="header gradient-brand-leaf">
+            <h1>Axinite 0.0.8</h1>
+            <li><a class="btn btn-header" href="https://github.com/citrusui/axinite">View on GitHub</a></li>
+            <li><a class="btn btn-header" href="https://twitter.com/citrusui">Follow me on Twitter</a></li>
+
+      </div>
+      <div class="container">
             <h1>Test h1</h1>
             <h2>Test h2</h2>
             <h3>Test h3</h3>
@@ -25,9 +32,12 @@
             <pre>Test code block<br>Test code block test code block test code block</pre>
             <br>
             <a href="https://example.com">Test Link</a>
+            <a>Test link 2</a>
             <br>
             <input class="form form-default" placeholder=".form .form-default">
             <input class="form form-brand" placeholder=".form .form-brand">
+            <input class="form form-candy" placeholder=".form .form-candy">
+            <input class="form form-butter" placeholder=".form .form-butter">
             <input class="form form-dust" placeholder=".form .form-dust">
             <input class="form form-flame" placeholder=".form .form-flame">
             <input class="form form-leaf" placeholder=".form .form-leaf">
@@ -37,6 +47,7 @@
             <a class="btn btn-default" href="#">.btn-default</a>
             <a class="btn btn-brand" href="#">.btn-brand</a>
             <a class="btn btn-candy" href="#">.btn-candy</a>
+            <a class="btn btn-butter" href="#">.btn-butter</a>
             <a class="btn btn-dust" href="#">.btn-dust</a>
             <a class="btn btn-flame" href="#">.btn-flame</a>
             <a class="btn btn-leaf" href="#">.btn-leaf</a>
@@ -51,6 +62,9 @@
             </div>
             <div class="msg msg-candy">
                   .msg-candy
+            </div>
+            <div class="msg msg-butter">
+                  .msg-butter
             </div>
             <div class="msg msg-dust">
                   .msg-dust
@@ -79,10 +93,10 @@
             <span class="tip tip-right" aria-label="Test .tip-right">
                   .tip .tip-right
                   </span>
+      </div>
+      <script>
+            document.addEventListener("touchstart", function() {});
+      </script>
+</body>
 
-            <script>
-                  document.addEventListener("touchstart", function() {});
-            </script>
-      </body>
-
-      </html>
+</html>

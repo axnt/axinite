@@ -1,21 +1,36 @@
 // Component colors
-$primary-default: #e5e5e5 !default;
+$primary-default: #d8d8d8 !default;
 $primary-brand: #4ea5d9 !default;
+$primary-butter: #e5ce92 !default;
 $primary-candy: #d8abd4 !default;
 $primary-dust: #b89685 !default;
 $primary-flame: #e03431 !default;
 $primary-leaf: #79ce80 !default;
-$primary-light: #f5f7f9 !default;
 $primary-moon: #5762d5 !default;
+
+// Basic colors
+$white: #fff !default;
+$black: #000 !default;
 
 // Font stack
 $mono-font-stack: "Oxygen Mono", Menlo, "Lucida Console", "Roboto Mono", "Ubuntu Mono", monospace !default;
 $sans-serif-font-stack: Oxygen, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif !default;
 $serif-font-stack: Georgia, "Times New Roman", Times, serif !default;
 
+// Body
+$body-dark-color: #f9f9f9 !default;
+$body-light-color: #424C55 !default;
+$body-text-color: #888 !default;
+$dark-bg-color: $body-light-color !default;
+$light-bg-color: $body-dark-color !default;
+
 // Code
+$code-bg-color: #f5f7f9 !default;
 $code-text-color: #92b4a7 !default;
-$kbd-bg-color: #261c15 !default;
+$kbd-bg-color: $black !default;
+$kbd-text-color: $white !default;
+$pre-text-color: $code-text-color !default;
+$pre-bg-color: $code-bg-color !default;
 
 // Tooltips
 $tooltip-bg-color: #000 !default;

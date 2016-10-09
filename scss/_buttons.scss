@@ -4,7 +4,7 @@ button,
 .btn,
 .btn[href] {
     border-radius: .25rem;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     display: inline-block;
     font-size: 1rem;
@@ -16,30 +16,35 @@ button,
     -webkit-user-select: none;
 }
 
-.btn-default {
-    @include button($primary-default);
+.btn-header {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid $white;
+
+    &:hover,
+    &:active {
+        color: $white;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+
+    &:hover { background-color: rgba(255, 255, 255, .3); }
+
+    &:active { background-color: rgba(255, 255, 255, .5); }
 }
 
-.btn-brand {
-    @include button($primary-brand);
-}
 
-.btn-candy {
-    @include button($primary-candy);
-}
+.btn-default { @include button($primary-default); }
 
-.btn-dust {
-    @include button($primary-dust);
-}
+.btn-brand { @include button($primary-brand); }
 
-.btn-flame {
-    @include button($primary-flame);
-}
+.btn-butter { @include button($primary-butter); }
 
-.btn-leaf {
-    @include button($primary-leaf);
-}
+.btn-candy { @include button($primary-candy); }
 
-.btn-moon {
-    @include button($primary-moon);
-}
+.btn-dust { @include button($primary-dust); }
+
+.btn-flame { @include button($primary-flame); }
+
+.btn-leaf { @include button($primary-leaf); }
+
+.btn-moon { @include button($primary-moon); }
