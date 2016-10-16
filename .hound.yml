@@ -1,0 +1,5 @@
+fail_on_violations: true
+
+scss:
+  config_file: scss/.scss-lint.yml
+  enabled: true

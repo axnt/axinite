@@ -1,0 +1,63 @@
+a {
+  color: lighten($primary-brand, 5%);
+  text-decoration: none;
+
+  &:active,
+  &:hover,
+  &:visited { text-decoration: underline; }
+
+  &:visited:not(.btn) { color: lighten($primary-danger, 5%); }
+
+  &:link:hover:not(.btn) {
+    color: darken($primary-brand, 10%);
+    }
+
+  &:link:active:not(.btn) {
+    color: darken($primary-brand, 20%);
+    }
+
+  &:visited:hover:not(.btn) {
+    color: darken($primary-danger, 10%);
+    }
+
+  &:visited:active:not(.btn) {
+    color: darken($primary-danger, 20%);
+    }
+}
+
+body { color: $body-text-color; }
+
+html {
+  font-family: $sans-serif-font-stack;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong { color: inherit; }
+
+h1 { font-size: $h1-font-size; }
+
+h2 { font-size: $h2-font-size; }
+
+h3 { font-size: $h3-font-size; }
+
+h4 { font-size: $h4-font-size; }
+
+h5 { font-size: $h5-font-size; }
+
+h6 { font-size: $h6-font-size; }
+
+.light-bg {
+  color: $body-light-color;
+  background-color: $light-bg-color;
+}
+
+.dark-bg {
+  color: $body-dark-color;
+  background-color: $dark-bg-color;
+}

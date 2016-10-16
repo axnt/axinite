@@ -5,8 +5,8 @@ samp { font-family: $mono-font-stack; }
 
 code,
 kbd {
-    padding: 2px 4px;
-    vertical-align: text-bottom;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
 }
 
 code,
@@ -14,21 +14,22 @@ kbd,
 pre { border-radius: 2px; }
 
 code {
-    background-color: $code-bg-color;
-    color: $code-text-color;
+  color: $code-text-color;
+  background-color: $code-bg-color;
 }
 
 kbd {
-    background-color: $kbd-bg-color;
-    color: $kbd-text-color;
+  color: $kbd-text-color;
+  background-color: $kbd-bg-color;
 }
 
 pre {
-    background-color: $pre-bg-color;
-    color: $pre-text-color;
-    border: 1px solid darken($pre-bg-color, 5%);
-    display: block;
-    line-height: 1.25;
-    overflow-x: auto;
-    padding: 1em;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.25;
+  color: $pre-text-color;
+  background-color: $pre-bg-color;
+  border: 1px solid darken($pre-bg-color, 5%);
+  -webkit-overflow-scrolling: touch;
 }

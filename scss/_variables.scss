@@ -1,25 +1,24 @@
 // Component colors
 $primary-default: #d8d8d8 !default;
-$primary-brand: #4ea5d9 !default;
-$primary-butter: #e5ce92 !default;
-$primary-candy: #d8abd4 !default;
-$primary-dust: #b89685 !default;
-$primary-flame: #e03431 !default;
-$primary-leaf: #79ce80 !default;
-$primary-moon: #5762d5 !default;
+$primary-brand: #5762d5 !default;
+$primary-info: #4ea5d9 !default;
+$primary-success: #79ce80 !default;
+$primary-warning: #e8e366 !default;
+$primary-caution: #ff572d !default;
+$primary-danger: #e03431 !default;
 
 // Basic colors
 $white: #fff !default;
 $black: #000 !default;
 
 // Font stack
-$mono-font-stack: "Oxygen Mono", Menlo, "Lucida Console", "Roboto Mono", "Ubuntu Mono", monospace !default;
-$sans-serif-font-stack: Oxygen, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif !default;
+$mono-font-stack: Menlo, "Lucida Console", "Roboto Mono", "Ubuntu Mono", monospace !default;
+$sans-serif-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif !default;
 $serif-font-stack: Georgia, "Times New Roman", Times, serif !default;
 
 // Body
 $body-dark-color: #f9f9f9 !default;
-$body-light-color: #424C55 !default;
+$body-light-color: #424c55 !default;
 $body-text-color: #888 !default;
 $dark-bg-color: $body-light-color !default;
 $light-bg-color: $body-dark-color !default;
@@ -34,8 +33,8 @@ $pre-bg-color: $code-bg-color !default;
 
 // Tooltips
 $tooltip-bg-color: #000 !default;
-$tooltip-delay: 0.4s !default;
-$tooltip-duration: 0.1s !default;
+$tooltip-delay: .4s !default;
+$tooltip-duration: .1s !default;
 $tooltip-max-width: 250px !default;
 $tooltip-text-color: #fff !default;
 $tooltip-z-index: 1000000 !default;
@@ -51,3 +50,6 @@ $h6-font-size: $body-font-size !default;
 
 // Spacing
 $base-line-height: 1.5 !default;
+
+// Shadow
+$box-shadow-color: rgba(0,0,0,.3) !default;

@@ -1,6 +1,10 @@
 language: node_js
 node_js:
  - "6"
+rvm:
+ - "2.3"
+install:
+ - "gem install scss-lint"
 script:
   - "npm run build"
 notifications:

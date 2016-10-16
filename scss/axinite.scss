@@ -1,9 +1,13 @@
-// Axinite
+// Axinite 0.0.9
+// Copyright (c) 2016 Avery Magnotti
+// Released under the MIT license.
+// https://github.com/axnt/axinite
 
 @import "normalize";
 @import "custom";
 @import "variables";
-@import "base";
+@import "mixins";
+@import "body";
 @import "buttons";
 @import "code";
 @import "forms";

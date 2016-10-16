@@ -1,10 +1,11 @@
 {
   "name": "axinite",
-  "version": "0.0.8",
-  "homepage": "https://citrusui.github.io/axinite/",
+  "version": "0.0.9",
+  "homepage": "https://axnt.github.io/axinite/",
   "author": "Avery Magnotti <citrusui@users.noreply.github.com>",
   "description": "Uncomplicated CSS for the future",
-  "main": "scss/axinite.scss",
+  "style": "dist/css/axinite.css",
+  "sass": "scss/axinite.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/citrusui/axinite.git"
@@ -18,18 +19,20 @@
     "responsive"
   ],
   "bugs": {
-    "url": "https://github.com/citrusui/axinite/issues"
+    "url": "https://github.com/axnt/axinite/issues"
   },
   "scripts": {
-    "build": "npm run sass && npm run min && npm run docs",
+    "build": "npm run lint && npm run sass && npm run min && npm run prefix && npm run docs",
     "docs": "cp -r dist/css/*.css docs/css",
     "hash": "echo \"Current SRI hash:\"; openssl dgst -sha384 -binary dist/css/axinite.min.css | openssl base64 -A; echo \n",
+    "lint": "git diff HEAD --check && scss-lint -c scss/.scss-lint.yml scss",
     "min": "node-sass --output-style compressed --source-map true scss/axinite.scss dist/css/axinite.min.css",
+    "prefix": "postcss -u autoprefixer -m -r dist/css/axinite*.css",
     "sass": "node-sass --output-style expanded --source-map true scss/axinite.scss -o dist/css",
-    "watch": "node-sass -w scss/axinite.scss -o docs/css"
+    "watch": "node-sass -w scss/axinite.scss -o dist/css"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.0",
+    "autoprefixer": "^6.5.1",
     "node-sass": "^3.10.1",
     "normalize.css": "^5.0.0",
     "postcss-cli": "^2.6.0"

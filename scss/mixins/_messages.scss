@@ -1,10 +1,10 @@
 @mixin message($primary-color) {
-    background-color: lighten($primary-color, 20%);
-    border: 1px solid darken($primary-color, 5%);
-    border-radius: 3px;
-    color: darken($primary-color, 10%);
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 15px;
-    position: relative;
+  background-color: lighten($primary-color, 20%);
+  border: 1px solid darken($primary-color, 5%);
+  border-radius: 3px;
+  color: darken($primary-color, 10%);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 15px;
+  position: relative;
 }

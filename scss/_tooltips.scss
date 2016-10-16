@@ -1,39 +1,39 @@
 .tip { position: relative; }
 
 .tip::after {
-  background: $tooltip-bg-color;
-  border-radius: 3px;
-  color: $tooltip-text-color;
-  content: attr(aria-label);
-  display: none;
-  font: normal normal ($body-font-size * 0.75) $sans-serif-font-stack;
-  line-height: $base-line-height;
-  letter-spacing: normal;
-  opacity: 0;
-  padding: 5px 8px;
-  pointer-events: none;
   position: absolute;
+  z-index: $tooltip-z-index;
+  display: none;
+  padding: 5px 8px;
+  font: normal normal ($body-font-size * .75) $sans-serif-font-stack;
+  line-height: $base-line-height;
+  color: $tooltip-text-color;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
-  white-space: pre;
+  letter-spacing: normal;
   word-wrap: break-word;
-  z-index: $tooltip-z-index;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background-color: $tooltip-bg-color;
+  border-radius: 3px;
+  opacity: 0;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .tip::before {
-  border: 5px solid transparent;
-  color: $tooltip-bg-color;
-  content: "";
-  display: none;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
   position: absolute;
-  width: 0;
   z-index: ($tooltip-z-index + 1);
+  display: none;
+  width: 0;
+  height: 0;
+  color: $tooltip-bg-color;
+  pointer-events: none;
+  content: "";
+  border: 5px solid transparent;
+  opacity: 0;
 }
 
 @keyframes tooltip-fade {
@@ -47,45 +47,45 @@
 .tip:focus {
   &::before,
   &::after {
-    animation-name: tooltip-fade;
-    animation-duration: $tooltip-duration;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-delay: $tooltip-delay;
     display: inline-block;
     text-decoration: none;
+    animation-name: tooltip-fade;
+    animation-duration: $tooltip-duration;
+    animation-timing-function: ease-in;
+    animation-delay: $tooltip-delay;
+    animation-fill-mode: forwards;
   }
 }
 
 .tip-bottom {
   &::after {
-    margin-top: 5px;
-    right: 50%;
     top: 100%;
+    right: 50%;
+    margin-top: 5px;
   }
 
   &::before {
-    border-bottom-color: $tooltip-bg-color;
+    top: auto;
+    right: 50%;
     bottom: -5px;
     margin-right: -5px;
-    right: 50%;
-    top: auto;
+    border-bottom-color: $tooltip-bg-color;
   }
 }
 
 .tip-top {
   &::after {
+    right: 50%;
     bottom: 100%;
     margin-bottom: 5px;
-    right: 50%;
   }
 
   &::before {
-    border-top-color: $tooltip-bg-color;
+    top: -5px;
+    right: 50%;
     bottom: auto;
     margin-right: -5px;
-    right: 50%;
-    top: -5px;
+    border-top-color: $tooltip-bg-color;
   }
 }
 
@@ -96,18 +96,18 @@
 
 .tip-left {
   &::after {
+    right: 100%;
     bottom: 50%;
     margin-right: 5px;
-    right: 100%;
     transform: translateY(50%);
   }
 
   &::before {
-    border-left-color: $tooltip-bg-color;
+    top: 50%;
     bottom: 50%;
     left: -5px;
     margin-top: -5px;
-    top: 50%;
+    border-left-color: $tooltip-bg-color;
   }
 }
 
@@ -120,10 +120,10 @@
   }
 
   &::before {
-    border-right-color: $tooltip-bg-color;
+    top: 50%;
+    right: -5px;
     bottom: 50%;
     margin-top: -5px;
-    right: -5px;
-    top: 50%;
+    border-right-color: $tooltip-bg-color;
   }
 }
