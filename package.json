@@ -1,6 +1,6 @@
 {
   "name": "axinite",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "homepage": "https://axnt.github.io/axinite/",
   "author": "Avery Magnotti <citrusui@users.noreply.github.com>",
   "description": "Uncomplicated CSS for the future",
@@ -8,7 +8,7 @@
   "sass": "scss/axinite.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/citrusui/axinite.git"
+    "url": "git+https://github.com/axnt/axinite.git"
   },
   "license": "MIT",
   "keywords": [
