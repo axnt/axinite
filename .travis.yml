@@ -5,6 +5,7 @@ rvm:
  - "2.3"
 install:
  - "gem install scss-lint"
+ - "npm install"
 script:
   - "npm run build"
 notifications:

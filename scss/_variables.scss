@@ -25,7 +25,7 @@ $light-bg-color: $body-dark-color !default;
 
 // Code
 $code-bg-color: #f5f7f9 !default;
-$code-text-color: #92b4a7 !default;
+$code-text-color: #31a5a5 !default;
 $kbd-bg-color: $black !default;
 $kbd-text-color: $white !default;
 $pre-text-color: $code-text-color !default;
@@ -40,16 +40,25 @@ $tooltip-text-color: #fff !default;
 $tooltip-z-index: 1000000 !default;
 
 // Sizing
-$body-font-size: 1em !default;
-$h1-font-size: 2.25em;
-$h2-font-size: 2em;
-$h3-font-size: 1.75em;
-$h4-font-size: 1.5em;
-$h5-font-size: 1.25em;
-$h6-font-size: $body-font-size !default;
-
-// Spacing
 $base-line-height: 1.5 !default;
+$body-font-size: 1rem !default;
+$h1-font-size: 2.25rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: $body-font-size !default;
 
 // Shadow
 $box-shadow-color: rgba(0,0,0,.3) !default;
+
+// SVG icons
+$form-checkbox-icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12.5%"><path d="M2 20 L12 28 30 3"/></svg>' !default;
+$form-radio-icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14"/><path d=""/></svg>' !default;
+$form-select-icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentcolor" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12.5%"><path d="M30 10 L16 26 2 10 Z"/></svg>' !default;
+
+// Forms
+$form-border-color: $primary-default !default;
+
+// Utilities
+$divider-color: #eee !default;

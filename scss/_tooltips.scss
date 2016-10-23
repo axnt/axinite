@@ -1,4 +1,7 @@
-.tip { position: relative; }
+.tip {
+  position: relative;
+  border-bottom: 1px dotted lighten($body-text-color, 10%);
+}
 
 .tip::after {
   position: absolute;

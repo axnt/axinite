@@ -1,12 +1,19 @@
 .container {
-  max-width: 50em;
-  padding: 4em 1em;
+  max-width: 50rem;
+  padding: 1rem;
   margin: 0 auto;
   line-height: $base-line-height;
 }
 
-.header {
-  padding: 1.5em;
+.divider {
+  display: block;
+  max-width: 50rem;
+  margin: 1rem;
+  border-bottom: .1rem solid $divider-color;
+}
+
+header {
+  padding: 1.5rem;
   text-align: center;
 
   h2 {
@@ -15,7 +22,7 @@
 
   li {
     display: inline-block;
-    padding: .5em;
+    padding: .5rem;
     vertical-align: center;
     list-style: none;
     }

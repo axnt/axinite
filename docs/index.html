@@ -10,13 +10,13 @@
 </head>
 
 <body>
-      <div class="header gradient-brand">
-            <h1>Axinite 0.0.10</h1>
+      <header class="gradient-brand">
+            <h1>Axinite 0.0.11</h1>
             <h2>Uncomplicated CSS for the future.</h2>
             <li><a class="btn btn-lg btn-header" href="https://www.npmjs.com/package/axinite">Download</a></li>
             <li><a class="btn btn-lg btn-header" href="https://github.com/axnt/axinite">View on GitHub</a></li>
 
-      </div>
+      </header>
       <div class="container">
             <h1>Test h1</h1>
             <h2>Test h2</h2>
@@ -28,13 +28,65 @@
             <code>Test code</code>
             <br>
             <kbd>Test kbd</kbd>
-            <pre>Test code block<br>Test code block test code block test code block</pre>
+            <pre class="grad">Test code block<br>Test code block test code block test code block</pre>
             <br>
             <a href="https://example.com">Test Link</a>
             <a href=".">Test link 2</a>
             <br>
-            <input class="form" placeholder=".form">
             <br>
+            <form>
+                  <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input class="form-input" type="text" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                        <label class="form-label">Range</label>
+                        <input class="form-input" type="range" placeholder="Range">
+                  </div>
+                  <div class="form-group">
+                        <label class="form-label">Operating System</label>
+                        <label class="form-radio">
+                                <input type="radio" name="os">
+                                <i class="form-icon"></i> macOS
+                            </label>
+                        <label class="form-radio">
+                                <input type="radio" name="os">
+                                <i class="form-icon"></i> Windows
+                            </label>
+                        <label class="form-radio">
+                                <input type="radio" name="os">
+                                <i class="form-icon"></i> Linux
+                            </label>
+                  </div>
+                  <div class="form-group hide">
+                        <input type="file" class="form-file" title=" ">
+                        <span class="file-custom"></span>
+                  </div>
+                  <div class="form-group">
+                        <select class="form-select">
+                                <option>Choose a website</option>
+                                <option>Google</option>
+                                <option>GitHub</option>
+                                <option>npmjs</option>
+                            </select>
+                  </div>
+                  <div class="form-group">
+                        <label class="form-switch">
+                                <input type="checkbox">
+                                <i class="form-icon"></i> Switch
+                            </label>
+                  </div>
+                  <div class="form-group">
+                        <label class="form-label" for="input-example-3">Textarea</label>
+                        <textarea class="form-input" id="input-example-3" placeholder="Textarea" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                        <label class="form-checkbox">
+                                <input type="checkbox">
+                                <i class="form-icon"></i> Checkbox
+                            </label>
+                  </div>
+            </form>
             <br>
             <a class="btn btn-default" href="#">.btn-default</a>
             <a class="btn btn-brand" href="#">.btn-brand</a>
@@ -63,6 +115,7 @@
             <div class="msg msg-danger">
                   .msg-danger
             </div>
+            <br>
             <span class="tip tip-top" aria-label="Test .tip-top">
                   .tip .tip-top
                   </span>
@@ -78,6 +131,8 @@
             <span class="tip tip-right" aria-label="Test .tip-right">
                   .tip .tip-right
                   </span>
+            <div class="divider"></div>
+            <p>Version 0.0.11. Built by Avery Magnotti (<a href="https://twitter.com/citrusui">citrusui</a>). Released under the MIT license.</p>
       </div>
 
       <script>

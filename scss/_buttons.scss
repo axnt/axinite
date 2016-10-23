@@ -15,12 +15,12 @@ button,
 
 .btn-sm,
 .btn-sm[href] {
-  @include button-size(.125rem, .5rem, .75em);
+  @include button-size(.125rem, .5rem, .75rem);
 }
 
 .btn-lg,
 .btn-lg[href] {
-  @include button-size(.625rem, 1.25rem, 1.25em);
+  @include button-size(.625rem, 1.25rem, 1.25rem);
 }
 
 .btn-header {

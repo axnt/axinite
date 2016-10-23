@@ -1,6 +1,6 @@
 {
   "name": "axinite",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "homepage": "https://axnt.github.io/axinite/",
   "author": "Avery Magnotti <citrusui@users.noreply.github.com>",
   "description": "Uncomplicated CSS for the future",
@@ -15,7 +15,7 @@
     "axinite",
     "css",
     "scss",
-    "minimal",
+    "modular",
     "responsive"
   ],
   "bugs": {

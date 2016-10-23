@@ -495,27 +495,27 @@ strong {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .light-bg {
@@ -533,7 +533,7 @@ button,
 .btn[href] {
   display: inline-block;
   padding: .375rem .5rem;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -549,13 +549,13 @@ button,
 .btn-sm,
 .btn-sm[href] {
   padding: 0.125rem 0.5rem;
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 
 .btn-lg,
 .btn-lg[href] {
   padding: 0.625rem 1.25rem;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .btn-header {
@@ -746,7 +746,7 @@ pre {
 }
 
 code {
-  color: #92b4a7;
+  color: #31a5a5;
   background-color: #f5f7f9;
 }
 
@@ -757,32 +757,268 @@ kbd {
 
 pre {
   display: block;
-  padding: 1em;
+  padding: 1rem;
   overflow-x: auto;
+  overflow-y: hidden;
   line-height: 1.25;
-  color: #92b4a7;
+  color: #31a5a5;
   background-color: #f5f7f9;
   border: 1px solid #e5eaef;
   -webkit-overflow-scrolling: touch;
 }
 
-.form {
-  min-height: 34px;
-  padding: 6px 8px;
-  font-family: inherit;
-  font-size: 1em;
-  line-height: 20px;
+form {
+  text-decoration: none;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  padding: .7rem .8rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #000;
+  background: #fff;
+  background-image: none;
+  border: 0.1rem solid #d8d8d8;
+  border-radius: .3rem;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-input:focus, .form-input:hover {
+  border-color: #4ea5d9;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+
+.form-select {
+  padding: .5rem .8rem;
+  font-size: 1rem;
   vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  border: 1px solid #eee;
+  border: 0.1rem solid #d8d8d8;
+  border-radius: .3rem;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-select:not([multiple]) {
+  padding-right: 2.4rem;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentcolor" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12.5%"><path d="M30 10 L16 26 2 10 Z"/></svg>') no-repeat right 0.75rem center/0.8rem 1rem;
+}
+
+.form-select:focus, .form-select:hover {
+  border-color: #4ea5d9;
+}
+
+.form-checkbox input,
+.form-radio input,
+.form-switch input {
+  display: none;
+}
+
+.form-checkbox,
+.form-radio {
+  position: relative;
+  display: inline-block;
+  padding: .4rem .5rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+}
+
+.form-checkbox .form-icon,
+.form-radio .form-icon {
+  position: relative;
+  top: .08rem;
+  left: -.5rem;
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  vertical-align: top;
+  border: 0.1rem solid #d8d8d8;
+  outline: none;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.form-checkbox:hover .form-icon,
+.form-radio:hover .form-icon {
+  border-color: #bfbfbf;
+}
+
+.form-checkbox input:focus + .form-icon,
+.form-radio input:focus + .form-icon {
+  border-color: #4ea5d9;
+}
+
+.form-checkbox input:checked + .form-icon,
+.form-radio input:checked + .form-icon {
+  background: #4ea5d9;
+  border-color: #4ea5d9;
+}
+
+.form-checkbox input:active + .form-icon,
+.form-radio input:active + .form-icon {
+  background: #e5e5e5;
+}
+
+.form-checkbox input:active:checked + .form-icon,
+.form-radio input:active:checked + .form-icon {
+  background: #78bae2;
+  border-color: #78bae2;
+}
+
+.form-checkbox .form-icon {
+  border-radius: .2rem;
+}
+
+.form-checkbox input:checked + .form-icon::after {
+  position: relative;
+  top: -35%;
+  padding-right: 1.4rem;
+  content: "";
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12.5%"><path d="M2 20 L12 28 30 3"/></svg>') no-repeat 0.8rem/0.8rem;
+  background-position: center;
+}
+
+.form-radio .form-icon {
+  border-radius: 1rem;
+}
+
+.form-radio input:checked + .form-icon::after {
+  position: relative;
+  top: -34%;
+  padding-right: 1.4rem;
+  content: "";
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14"/><path d=""/></svg>') no-repeat 0.8rem/0.8rem;
+  background-position: center;
+}
+
+.form-switch {
+  position: relative;
+  display: inline-block;
+  padding: .3rem 2rem .3rem .5rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.form-switch .form-icon {
+  position: relative;
+  top: 0;
+  left: -.5rem;
+  display: inline-block;
+  width: 2.8rem;
+  height: 1.6rem;
+  padding: 0;
+  line-height: 2.6rem;
+  vertical-align: top;
+  background: #d8d8d8;
+  border: 0.125rem solid #d8d8d8;
+  border-radius: .9rem;
+  outline: none;
+}
+
+.form-switch .form-icon::after {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  content: "";
+  background: #fff;
+  border-radius: .8rem;
+  -webkit-transition: left .15s ease;
+  transition: left .15s ease;
+}
+
+.form-switch input:checked + .form-icon {
+  background: #4ea5d9;
+  border-color: #4ea5d9;
+}
+
+.form-switch input:checked + .form-icon::after {
+  left: 1.2rem;
+}
+
+.form-switch input:active + .form-icon::after {
+  background: white;
+}
+
+.form-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.form-file {
+  width: 100%;
+}
+
+.form-file::before {
+  display: inline-block;
+  padding: 5px 8px;
+  font-size: .8rem;
+  font-weight: bold;
+  color: #424c55;
+  white-space: nowrap;
+  cursor: pointer;
+  content: "Select a file";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid #d8d8d8;
   border-radius: 3px;
   outline: none;
 }
 
-.form .focus, .form:focus {
+.form-file:hover::before {
+  border-color: #4ea5d9;
+}
+
+.form-file:focus {
+  outline: none;
+}
+
+.form-file:active::before {
+  border-color: #2b8ec9;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  cursor: pointer;
+  background: #fff;
   border: 1px solid #d8d8d8;
-  box-shadow: 0 0 5px #d8d8d8;
+  border-radius: 1rem;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #d8d8d8;
 }
 
 .gradient-brand {
@@ -1158,6 +1394,7 @@ pre {
 
 .tip {
   position: relative;
+  border-bottom: 1px dotted #a2a2a2;
 }
 
 .tip::after {
@@ -1165,7 +1402,7 @@ pre {
   z-index: 1000000;
   display: none;
   padding: 5px 8px;
-  font: normal normal 0.75em -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+  font: normal normal 0.75rem -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
   line-height: 1.5;
   color: #fff;
   text-align: center;
@@ -1300,24 +1537,31 @@ pre {
 }
 
 .container {
-  max-width: 50em;
-  padding: 4em 1em;
+  max-width: 50rem;
+  padding: 1rem;
   margin: 0 auto;
   line-height: 1.5;
 }
 
-.header {
-  padding: 1.5em;
+.divider {
+  display: block;
+  max-width: 50rem;
+  margin: 1rem;
+  border-bottom: 0.1rem solid #eee;
+}
+
+header {
+  padding: 1.5rem;
   text-align: center;
 }
 
-.header h2 {
+header h2 {
   font-weight: normal;
 }
 
-.header li {
+header li {
   display: inline-block;
-  padding: .5em;
+  padding: .5rem;
   vertical-align: center;
   list-style: none;
 }
