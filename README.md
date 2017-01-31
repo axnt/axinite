@@ -1,5 +1,7 @@
 # Axinite
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axnt/axinite.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/axnt/axinite.svg?branch=master)](https://travis-ci.org/axnt/axinite)
 [![devDependencies Status](https://david-dm.org/axnt/axinite/dev-status.svg)](https://david-dm.org/axnt/axinite?type=dev)
 
